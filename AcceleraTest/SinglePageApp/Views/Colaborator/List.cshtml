@@ -1,0 +1,39 @@
+﻿@{
+    Layout = "";
+}
+@Scripts.Render("~/bundles/app/colaborator.model")
+@Scripts.Render("~/bundles/app/colaboratorlist.viewmodel")
+<script id="customMessageTemplate" type="text/html">
+    <span style="text-indent: 0px;" data-bind="css: { 'field-validation-error': !field.isValid(), 'field-validation-valid': field.isValid() }">
+        <span data-bind="validationMessage: field"></span>
+    </span>
+</script>
+<div class="controls-row" style="margin-bottom: 15px;">
+    <input type="text" class="search-query" placeholder="Buscar" data-bind="value: query, event: { change: findColaborators }">
+</div>
+<div class="controls-row">
+    <table class="table table-hover table-striped table-bordered">
+        <thead>
+            <tr>
+                <td class="span5">Nome</td>
+                <td class="span2">Matricula</td>
+                <td class="span3">Endereço</td>
+                <td class="span2"></td>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: colaborators">
+            <tr>
+                <td data-bind="text: name"></td>
+                <td data-bind="text: registry"></td>
+                <td data-bind="text: fullAddress"></td>
+                <td>
+                    <a data-bind="attr: { href: '#/colaborators/details/' + id() }">Detalhes</a>
+                    |
+                    <a data-bind="attr: { href: '#/colaborators/edit/' + id() }">Editar</a>
+                    |
+                    <a data-bind="event: { click: $root.remove }" href="javascript:;">Excluir</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

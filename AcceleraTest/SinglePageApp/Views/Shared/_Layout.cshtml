@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/bootstrap")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <header class="container">
+        <div class="navbar span11">
+            <div class="navbar-inner">
+                <a class="brand" href="#/">CRUD Colaboradores</a>
+                <ul class="nav">
+                    <li><a href="#/colaborators/new">Novo Colaborador</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="container" id="pagewrapper">
+        <div class="span11">
+            @RenderBody()
+        </div>
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

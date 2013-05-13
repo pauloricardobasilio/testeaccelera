@@ -1,0 +1,39 @@
+﻿.validation-summary-errors {
+    text-shadow: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    background-color: #F2DEDE;
+    border-color: #EED3D7;
+    color: #B94A48;
+}
+
+    .validation-summary-errors li {
+        list-style: none;
+        padding: 5px;
+    }
+
+.control-group input.input-validation-error,
+.control-group select.input-validation-error,
+.control-group textarea.input-validation-error {
+    color: #B94A48;
+    border-color: #B94A48;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+    .control-group input.input-validation-error:focus,
+    .control-group select.input-validation-error:focus,
+    .control-group textarea.input-validation-error:focus {
+        border-color: #953b39;
+        -webkit-box-shadow: 0 0 6px #d59392;
+        -moz-box-shadow: 0 0 6px #d59392;
+        box-shadow: 0 0 6px #d59392;
+    }
+
+.field-validation-error {
+    color: #B94A48;
+    margin-left: 10px;
+    margin-top: 5px;
+}

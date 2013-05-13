@@ -1,0 +1,28 @@
+﻿@{
+    Layout = null;
+}
+@Scripts.Render("~/bundles/app/colaborator.model")
+@Scripts.Render("~/bundles/app/colaboratoredit.viewmodel")
+<div class="span11">
+    <div class="row">
+        <h3 class="pull-left">Detalhes <small><a href="#/">Voltar</a></small> </h3>
+    </div>
+    <div class="row">
+        <dl>
+            <dt>Nome</dt>
+            <dd data-bind="text: name"></dd>
+            <br>
+            <dt>Matricula</dt>
+            <dd data-bind="text: registry"></dd>
+            <br>
+            <dt>Data de Nascimento</dt>
+            <dd data-bind="text: dateOfBirth"></dd>
+            <br>
+            <dt>Telefone</dt>
+            <dd data-bind="text: phoneNumber"></dd>
+            <br>
+            <dt>Endereço</dt>
+            <dd data-bind="text: fullAddress"></dd>
+        </dl>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+﻿@{
+    Layout = null;
+}
+@Scripts.Render("~/bundles/app/colaborator.model")
+@Scripts.Render("~/bundles/app/colaboratoredit.viewmodel")
+<script id="customMessageTemplate" type="text/html">
+    <span style="text-indent: 0px;" data-bind="css: { 'field-validation-error': !field.isValid(), 'field-validation-valid': field.isValid() }">
+        <span data-bind="validationMessage: field"></span>
+    </span>
+</script>
+<form method="POST" data-bind="submit: saveColaborator">
+    <fieldset>
+        <legend data-bind="text: legend"></legend>
+        <div data-bind="if: errorsList().length > 0">
+            <div class="alert alert-error" data-bind="foreach: errorsList">
+                <em data-bind="text: $data"></em>
+                <br />
+            </div>
+        </div>
+        <div data-bind="if: messagesList().length > 0">
+            <div class="alert alert-success" data-bind="foreach: messagesList">
+                <em data-bind="text: $data"></em>
+                <br />
+            </div>
+        </div>
+        <input type="hidden" name="Id" data-bind="value: id" />
+        <div class="controls-row">
+            <label for="Name">Nome</label>
+            <div class="control-group">
+                <input type="text" id="Name" name="Name" data-bind="value: name" class="span4" />
+            </div>
+        </div>
+        <div class="controls-row">
+            <label for="Registry">Matricula</label>
+            <div class="control-group">
+                <input type="text" name="Registry" id="Registry" data-bind="value: registry" class="span2" />
+            </div>
+        </div>
+        <div class="controls-row">
+            <label for="DateOfBirth">Data de Nascimento</label>
+            <div class="control-group">
+                <input type="text" id="DateOfBirth" name="DateOfBirth" data-bind="value: dateOfBirth" class="span3" />
+            </div>
+        </div>
+        <div class="controls-row">
+            <label for="PhoneNumber">Telefone</label>
+            <div class="control-group">
+                <input type="text" name="PhoneNumber" id="PhoneNumber" data-bind="value: phoneNumber" class="span3" />
+            </div>
+        </div>
+        <div class="controls-row">
+            <label for="Address">Endereço</label>
+            <div class="control-group">
+                <input type="text" name="Address" id="Address" data-bind="value: address" class="span4" />
+            </div>
+        </div>
+        <div class="controls-row">
+            <label for="Estate">Estado</label>
+            <div class="control-group">
+                <input type="text" name="Estate" id="Estate" data-bind="value: estate" />
+            </div>
+        </div>
+        <div class="controls-row">
+            <label for="City">Cidade</label>
+            <div class="control-group">
+                <input type="text" name="City" id="City" data-bind="value: city" />
+            </div>
+        </div>
+        <div class="controls-row">
+            <button class="btn btn-primary" type="submit">Salvar</button>
+        </div>
+    </fieldset>
+</form>
