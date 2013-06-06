@@ -23,7 +23,7 @@ namespace Application
         public void AddColaborator(Colaborator colaborator)
         {
             if (colaborator == null)
-                throw new ArgumentException("invalid_colaborator");
+                throw new ArgumentException("colaborator");
 
             var validator = DataAnnotationsEntityValidatorFactory.Create();
             if (!validator.IsValid(colaborator))
@@ -39,7 +39,7 @@ namespace Application
         public void UpdateColaborator(Colaborator colaborator)
         {
             if (colaborator == null || colaborator.Id <= 0)
-                throw new ArgumentException("invalid_colaborator");
+                throw new ArgumentException("colaborator");
 
             var validator = DataAnnotationsEntityValidatorFactory.Create();
             if (!validator.IsValid(colaborator))
