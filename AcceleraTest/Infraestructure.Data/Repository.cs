@@ -6,7 +6,6 @@ using System.Linq.Expressions;
 using Domain;
 using Domain.Contracts;
 using Infraestructure.Data.Contracts;
-using SpecificationMain;
 
 namespace Infraestructure.Data
 {
